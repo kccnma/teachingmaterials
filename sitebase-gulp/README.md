@@ -1,5 +1,5 @@
 # sitebase-gulp
-A gulp/npm version of sitebase [sitebase](https://kccnma.github.io/sitebase/ "Sitebase"), a minimal HTML + CSS + JS base front-end framework for simple web site projects.
+A gulp/npm version of [sitebase](https://kccnma.github.io/sitebase/ "Sitebase"), a minimal HTML + CSS + JS base front-end framework for simple web site projects.
 
 ## Documentation coming soon
 Dev work-in-progress links:
@@ -8,6 +8,23 @@ Dev work-in-progress links:
 
 ## Instructions
 1. Make sure that you have both node and gulp installed
+~~~~
+$ node -v
+$ gulp -v
+~~~~
 2. Clone the sitebase-gulp repo
-3. Install via "npm install"
-4. Develop using "gulp" 
+~~~~
+$ git clone http://
+~~~~
+3. Be sure to change directories to your project directory (sitebase-gulp)
+~~~~
+$ cd sitebase-gulp
+~~~~
+3. Install via npm
+~~~~
+$ npm install
+~~~~
+4. Watch/compile/develop using gulp 
+~~~~
+$ gulp
+~~~~
