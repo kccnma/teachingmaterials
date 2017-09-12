@@ -12,11 +12,9 @@ Dev work-in-progress links:
 $ node -v
 $ gulp -v
 ~~~~
-2. Clone the sitebase-gulp repo
-~~~~
-$ git clone https://github.com/kccnma/teachingmaterials/sitebase-gulp
-~~~~
-3. Be sure to change directories to your project directory (sitebase-gulp)
+2. Download sitebase-gulp manually by going to https://github.com/kccnma/teachingmaterials and downloading the zip file. Unzip and move the sitebase-gulp directory to your target working local (eg. desktop)
+
+3. Once you have the sitebase-gulp directory locally installed, be sure to change directories to your project directory (sitebase-gulp) via your terminal app
 ~~~~
 $ cd sitebase-gulp
 ~~~~
