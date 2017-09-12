@@ -14,7 +14,7 @@ $ gulp -v
 ~~~~
 2. Clone the sitebase-gulp repo
 ~~~~
-$ git clone http://
+$ git clone https://github.com/kccnma/teachingmaterials/sitebase-gulp
 ~~~~
 3. Be sure to change directories to your project directory (sitebase-gulp)
 ~~~~
