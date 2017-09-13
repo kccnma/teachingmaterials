@@ -1,17 +1,18 @@
 # sitebase-gulp
 A gulp/npm version of [sitebase](https://kccnma.github.io/sitebase/ "Sitebase"), a minimal HTML + CSS + JS base front-end framework for simple web site projects.
 
-## Documentation coming soon
-Dev work-in-progress links:
+## Documentation (In-Progrss/Coming Soon)
+Sitebase dev work-in-progress links:
 * [sitebase demo](https://kccnma.github.io/sitebase/ "Sitebase Demo")
 * [sitebase documentation](https://kccnma.github.io/sitebase/documentation.html "Sitebase Docs")
 
-## Structure 
-projectname/
-├── <a href="https://github.com/kccnma/teachingmaterials/sitebase-gulp/dist/">dist/</a> (final site with compiled files)
-├── <a href="https://github.com/kccnma/teachingmaterials/sitebase-gulp/src/">src/</a> (pre-compiled source files such as all sass files, partials, etc.)
-├── <a href="https://github.com/kccnma/teachingmaterials/sitebase-gulp/blob/master/gulpfile.js">gulpfile.js</a> (gulp file with all task functions) 
-├── <a href="https://github.com/kccnma/teachingmaterials/sitebase-gulp/blob/master/package.json">package.json</a> (npm package file with a list all dependencies) 
+## Folder Structure 
+
+    projectname/
+    ├── dist/               # final site with compiled files
+    ├── src/                # pre-compiled source files such as all sass files, partials, etc.
+    ├── gulpfile.js         # gulp file with all task functions 
+    ├── package.json        # npm package file with a list all dependencies
 
 ## Installation Instructions
 1. Before you install, make sure that you have both node and gulp already installed. You can confirm via the following commands (to be entered via CLI, such as Terminal on a MAC or Command Prompt on a PC)
