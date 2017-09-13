@@ -28,12 +28,12 @@ $ npm install gulp -g
 ~~~~
 * If you run into errors, such as a permission error when installing gulp, you can try the following potential fixes:
     * Make sure you are logged in as an administrator
-    * Try changing yout permsissions manually via npm's permission fix guide page here: https://docs.npmjs.com/getting-started/fixing-npm-permissions
+    * Try changing yout permsissions manually via [npm's permission fix guide page](https://docs.npmjs.com/getting-started/fixing-npm-permissions "npm permission fix guide page"): 
         * See Option 1, Step 2 - this worked for our MACs in our computer lab
     * Try installing command line tools X Code: $ xcode-select --install
     * Try installing X Code
 * Once confirmed that both node and gulp have been successfully installed, you can move on to Step 2.
-2. Download the sitebase-gulp.zip file (manually download the zip file and unzip/extract it somewhere you can easily access/edit locally)
+2. Download the [sitebase-gulp.zip](https://raw.githubusercontent.com/kccnma/teachingmaterials/master/sitebase-gulp.zip "sitebase-gulp zip file") file (manually download the zip file and unzip/extract it somewhere you can easily access/edit locally)
     * Tip: avoid placing your local dev project directories too deep into nested folders, since you will eventually need to traverse to the them via command line
 3. Via command line, traverse/change directories (cd) until you are inside of your target project working directory (sitebase-gulp)
 ~~~~
