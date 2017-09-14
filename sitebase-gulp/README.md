@@ -1,7 +1,7 @@
 # sitebase-gulp
 A gulp/npm version of [sitebase](https://kccnma.github.io/sitebase/ "Sitebase"), a minimal HTML + CSS + JS base front-end framework for simple web site projects.
 
-## Documentation (In-Progrss/Coming Soon)
+## Documentation (in progress)
 Sitebase dev work-in-progress links:
 * [sitebase demo](https://kccnma.github.io/sitebase/ "Sitebase Demo")
 * [sitebase documentation](https://kccnma.github.io/sitebase/documentation.html "Sitebase Docs")
@@ -21,8 +21,8 @@ $ node -v
 $ npm -v
 $ gulp -v
 ~~~~
-* Re: Node - If you do not have node installed, go to [nodejs.org](https://nodejs.org/en/ "Node JS"), download the installer package and follow the install instructions/wizard. PC users, please note that you might need to restart after install.
-* Re: Gulp - If you do not have gulp installed, you must first install node/npm (see above), then install it globally via npm:
+* Re: node - If you do not have node installed, go to [nodejs.org](https://nodejs.org/en/ "Node JS"), download the installer package and follow the install instructions/wizard. PC users, please note that you might need to restart after install.
+* Re: gulp - If you do not have gulp installed, you must first install node/npm (see above), then install it globally via npm:
 ~~~~
 $ npm install gulp -g
 ~~~~
@@ -48,4 +48,4 @@ $ npm install
 $ gulp
 ~~~~
 ## Conclusion
-Congratulations, you just set up a local front-end development environment via npm (package manager) that uses gulp (task runner) tocompile your sass (pre-processer) files. You'll also notice that gulp is using browser-sync to spin up a local web server and to refresh your browser automatically on every file change. Gulp is also being used to auto-minimize/optimize all images.
+Congratulations, you just set up a local front-end development environment via npm (package manager) that uses gulp (task runner) to compile your sass (pre-processer) files. You'll also notice that gulp is using browser-sync to spin up a local web server and to refresh your browser automatically on every file change. Gulp is also being used to auto-minimize/optimize all images.
