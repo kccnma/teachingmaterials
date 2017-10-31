@@ -19,14 +19,14 @@ function custom_remove_woocommerce_sidebar () {
     remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 }  */
 
-/* Remove Items from the Header */
+/* Remove Items from the Header 
 add_action( 'init', 'custom_remove_headeritems', 10 );
 function custom_remove_headeritems () {
     remove_action( 'storefront_header', 'storefront_secondary_navigation', 30 );
     remove_action( 'storefront_header', 'storefront_product_search', 40 );
 } 
 
-
+*/
 
 /* Change Storefront Footer Credit */
 add_action( 'init', 'custom_remove_footer_credit', 10 );
@@ -37,7 +37,7 @@ function custom_remove_footer_credit () {
 function custom_storefront_credit() {
 	?>
 	<div class="site-info">
-		&copy; <?php echo get_the_date( 'Y' ) . get_bloginfo( 'name' ); ?>
+		&copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?>
 	</div><!-- .site-info -->
 	<?php
 }

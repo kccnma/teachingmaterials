@@ -104,3 +104,206 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+
+/* Custom Variables */
+
+// Typography: Helvetica (default)
+$body-font-family: Helvetica, Arial, sans-serif;
+$heading-font-family: Helvetica, Arial, sans-serif;
+$navigation-font-family: Helvetica, Arial, sans-serif;
+// Colors (default theme)
+$text-color: #333;
+$text-color-light: #999;
+$link-color: #39c;
+$link-color-dark: #069;
+$accent-color: #000;
+$background-color-body: #fff;
+$background-color-header: #fff;
+$background-color-footer: #fff;
+$background-color-hero: #ddd;
+
+// Borders
+$border-color: #ccc;
+$border-width: 0px;
+
+// Breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+/* LAYOUT */
+/*
+#MEDIA QUERIES (Mobile First)
+	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
+	#SMALL- (Mobile Only Overrides) - max-width: 767px
+	#MEDIUM+ (Tablet) - min-width: 768px
+	#LARGE+ (Desktop) - min-width: 1050px
+	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
+
+/* SMALL+ (Mobile First Defaults) */
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 92%;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
+@media (max-width: $breakpoint-small - 1)  {
+
+    /* Inherits Small/Mobile Body Type from Above */
+    /* Inherits Small/Mobile Fluid Width from Above */
+
+}
+
+/* #MEDIUM+ MEDIA QUERY */
+@media (min-width: $breakpoint-small)  {
+
+    /* Inherits Small/Mobile Body Type from Above */
+    /* Inherits Small/Mobile Fluid Width from Above */
+
+}
+
+/* #LARGE+ MEDIA QUERY */
+@media (min-width: $breakpoint-medium) {
+
+    /* LARGE BODY TYPE */
+    body {
+        font-size: 100%; /* 16px; */
+    }
+
+    /* FIXED WIDTH */
+    .container {
+        width: $breakpoint-medium - 150;
+        padding: 0 50px;
+    }
+
+}
+
+/* #EXTRA-LARGE+ MEDIA QUERY */
+@media (min-width: $breakpoint-large) {
+
+    /* EXTRA-LARGE BODY TYPE */
+    body { font-size: 112.5%; /* 18px; */ }
+
+    /* FIXED WIDTH */
+    .container {
+        width: $breakpoint-large - 150;
+    }
+
+}
+
+/* #SITE NAVIGATION  */
+/* Default Site-Navigation Menu (both header & footer) */
+.site-navigation  {
+    font-family: $navigation-font-family;
+
+    .menu-button {
+        display: none;
+    }
+
+    ul {
+        //border-top: $border-width solid $border-color;
+        //margin: 1em 0 -.5em 0;
+        padding: .5em 0;
+        text-align: center;
+        li {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            display: inline-flex; //for nest nav items
+
+            a {
+                display: block;
+                padding: .5em .75em .4em .75em;
+            }
+
+            a:hover {
+                //background: #fcfcfc;
+            }
+
+            ul {
+                border-top: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+
+    @media (min-width: $breakpoint-small)  {
+        ul {
+            border-top: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+
+                a {
+                    margin: 0 .5em;
+                    padding: 1em .5em .75em .5em;
+                }
+
+                /* DROP DOWN MENU */
+                /* stack nested lists */
+                li {
+                    display: block;
+                }
+                /* hide nested lists by default */
+                ul {
+                    text-align: left;
+                    position: absolute;
+                    z-index: 100;
+                    left: -9000px;
+                    background: $background-color-header;
+                    margin-left: .5em;
+                }
+
+                /* show nested lists on hover */
+                &:hover ul {
+                    left: auto;
+                }
+
+                /* SELECTED STATE */
+                &.selected,
+                &.current-menu-item {
+                    a {
+                        font-weight: bold;
+                    }
+                    li a {
+                        font-weight: normal;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* Default Site-Navigation (header only) */
+.site-header .site-navigation {
+    @media (min-width: $breakpoint-small)  {
+        float: right;
+    }
+}
+
+/* Default Site-Navigation (footer only) */
+.site-footer .site-navigation {
+    ul {
+        border-top: none;
+        margin: 0;
+    }
+}
