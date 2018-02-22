@@ -1,0 +1,266 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #HTML5
+    #BODY
+        #TYPOGRAPHY
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEOS
+        #COMPONENTS
+            #BUTTONS
+    #LAYOUT
+        #MEDIAQUERIES
+    #SITE STRUCTURE
+        #HEADER
+            #SITE-BRANDING (LOGO)   
+            #SITE NAVIGATION
+        #FOOTER
+        #SECTIONS
+        #SUB PAGES
+--------------------------------- */
+/* #HTML5 */
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
+/* #TYPOGRAPHY  */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgba(0,0,0,.7);;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 87.5%;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* #LINKS */
+a {
+  color: rgba(0,0,0,.4);;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0,0,0,.6);;
+}
+
+/* HELPERS */
+.text-centered {
+  text-align: center;
+}
+
+.text-centered p,
+.mywufooform{
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subheader {
+  color: rgba(0,0,0,.5);
+  font-weight: normal;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.full-width img {
+  width: 100%;
+}
+
+/* #IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.circular {
+    border-radius: 100%;
+}
+
+/* BUTTONS */
+a.button {
+    display: inline-block;
+    background-color: rgba(0,0,0,.3);
+    color: rgba(255,255,255,.8);
+    border-radius: .5em;
+    padding: 1em 2em .8em 2em;
+    margin: .5em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: .9em;
+}
+a.button:hover {
+    background-color: rgba(0,0,0,.5);
+}
+
+/* SITE-STRUCTURE */
+
+.site-header,
+.site-footer {
+    text-align: center;
+    padding: 3em 0 2em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.site-branding h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.site-navigation ul {
+    margin: 0;
+    padding: 2em 0;
+}
+
+.site-navigation li {
+    margin: 0 .5em;
+    padding: 0;
+    display: inline-block;
+}
+
+.site-navigation a {
+    display: block;
+    padding: 1em .5em;
+    color: rgba(0,0,0,.4);
+}
+
+.site-navigation a:hover,
+.site-navigation a.selected {
+    color: rgba(0,0,0,.6);
+    border-bottom: 0.05em solid rgba(0,0,0,.2);
+}
+
+section {
+    padding: 0 0 3em 0;
+}
+
+.hero {
+    padding: 4em 0;
+    background: #dedede;
+    margin-bottom: 6em;
+}
+
+
+/* FLEX GRID */
+
+@media (min-width: 768px) {
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+    .one-third.column {
+        width: 32%;
+    }
+    .two-thirds.column {
+        width: 60%;
+    }
+    
+}
+
+/* #THUMBGRID */
+.thumbgrid {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumbgrid a {
+    width: 49.5%;
+}
+
+@media (min-width:768px) {
+    .thumbgrid a {
+        width: 24.5%;
+    }
+}
+
+.thumbgrid a img {
+    filter: brightness(1.05);
+    transition: all ease-in-out 0.2s;
+    border: 1px solid rgba(255,255,255,0);
+}
+
+.thumbgrid a:hover img {
+    filter: brightness(1);
+    border: 1px solid rgba(0,0,0,.3);
+}
+
+/* Page Fade-ins */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main,
+fade-in {
+  opacity: 0;
+  animation: fade-in ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade-and-move-in {
+  from {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.fade-and-move-in * {
+  opacity: 0;
+  animation: fade-and-move-in ease-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.fade-and-move-in *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-and-move-in *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fade-and-move-in *:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.fade-and-move-in *:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.fade-and-move-in *:nth-child(5) {
+  animation-delay: 1s;
+}
+.fade-and-move-in *:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.fade-and-move-in *:nth-child(7) {
+  animation-delay: 1.4s;
+}
+.fade-and-move-in *:nth-child(8) {
+  animation-delay: 1.6s;
+}
+.fade-and-move-in *:nth-child(9) {
+  animation-delay: 1.8s;
+}

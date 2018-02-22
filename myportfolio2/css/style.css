@@ -1,0 +1,516 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE START
+        #HTML5
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEOS
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #MEDIAQUERIES
+        #CONTAINER
+        #GRID
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                #SITE-BRANDING (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+/* #HTML5 */
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+
+/* #TYPOGRAPHY  */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 87.5%;
+  /* 14px; */
+  line-height: 1.5em;
+  /* 14px x 1.5em = 21px */
+}
+
+/* #LINKS */
+a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999;
+}
+
+/* HELPERS */
+.text-centered {
+  text-align: center;
+}
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.subheader {
+  color: #999;
+  margin-top: 1em;
+  font-style: normal;
+  font-weight: normal;
+  clear: both;
+}
+
+/* #BUTTONS */
+button {
+  font-size: inherit;
+}
+
+button,
+a.button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 80%;
+  display: inline-block;
+  background-color: #bbb;
+  border: 1px solid #bbb;
+  color: #fff;
+  padding: 0.8em 1em 0.65em 1em;
+  -webkit-border-radius: 0.32em;
+  -moz-border-radius: 0.32em;
+  border-radius: 0.32em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: none;
+  cursor: pointer;
+  line-height: 1em;
+  transition: all ease-in-out 0.4s;
+}
+
+button.alt,
+a.button.alt {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.05em solid #dedede;
+  color: #bbb;
+}
+
+button:hover,
+a.button:hover,
+button.active:hover,
+a.button.active:hover {
+  background-color: #bbb;
+  color: #fff;
+  border-color: #bbb;
+  text-decoration: none;
+}
+
+button:focus,
+a.button:focus {
+  outline: none;
+}
+
+button.active,
+a.button.active {
+  background-color: #f5f5f5;
+  border-color: #bbb;
+}
+
+/* #IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.circular {
+  border-radius: 100%;
+}
+
+/* VIDEO */
+.video {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 1em;
+}
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* LAYOUT */
+/*
+#MEDIA QUERIES (Mobile First)
+	#DEFAULT/SMALL+ (Mobile First - Default Settings Outside of Media Queries)
+	#MEDIUM+ (Tablet) - min-width: 768px
+  #LARGE+ (Desktop) - min-width: 1150px
+  
+/* SMALL+ (Mobile First Defaults) */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 92%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* #LARGE+ MEDIA QUERY */
+@media (min-width: 1150px) {
+  /* LARGE BODY TYPE */
+  body {
+    font-size: 100%; /* 16px; */
+  }
+}
+
+/* Grid */
+/* Default Grid (on SMALL+ Screen Sizes) */
+.row {
+  margin: 0;
+}
+
+.column {
+  margin: 0 0 3em 0;
+}
+
+/* Medium Grid (on MEDIUM+ Screen Sizes) */
+@media (min-width: 768px) {
+  .column {
+    float: left;
+    margin-right: 8%;
+  }
+  .column:last-child {
+    margin-right: 0;
+  }
+  .column.centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .one-whole.column {
+    width: 100%;
+  }
+  .one-half.column {
+    width: 46%;
+  }
+  .one-third.column {
+    width: 28%;
+  }
+  .two-thirds.column {
+    width: 64%;
+  }
+  .one-fourth.column {
+    width: 19%;
+  }
+  .one-fifth.column {
+    width: 13.6%;
+  }
+}
+
+@media (max-width: 767px) {
+  .column.small {
+    float: left;
+    margin-right: 8%;
+  }
+  .column.small:last-child {
+    margin-right: 0;
+  }
+  .one-third.column.small {
+    width: 28%;
+  }
+}
+
+/* #CLEARFIXES */
+.group:after,
+.row:after,
+.container:after,
+.nav:after {
+  content: "";
+  display: table;
+  clear: both;
+  font-size: 0;
+}
+
+/* Header & Footer */
+.site-header {
+  /* border-bottom: 1px solid #eee; */
+  padding-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  .site-header {
+    padding-top: 1em;
+  }
+}
+
+.site-footer {
+  /* border-top: 1px solid #eee; */
+}
+
+/* Site Branding */
+.site-branding {
+  text-align: center;
+}
+.site-branding h1 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 1.5em 0 0.5em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+.site-branding h1 a {
+  font-weight: normal;
+  color: #777;
+  display: inline-block;
+}
+
+/* #SITE NAVIGATION  */
+/* Default Site-Navigation Menu (both header & footer) */
+.site-navigation {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 80%;
+  text-align: center;
+}
+.site-navigation .menu-button {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.site-navigation ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation li {
+  display: inline-block;
+}
+
+.site-navigation li a {
+  display: block;
+  padding: 1em;
+}
+
+.site-navigation li.selected a {
+  border-bottom: 0.05em solid #dedede;
+  padding-bottom: 0.95em;
+  color: #999;
+}
+
+/* Main Site Section (Main Content Area) */
+
+/* Main Sections */
+section {
+  padding: 1.5em 0;
+}
+
+/* FORMS */
+form {
+  margin: 1.75em 0;
+}
+
+form label {
+  display: block;
+}
+
+form input,
+form textarea {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.15em;
+  display: block;
+  margin-bottom: 1.25em;
+  width: 100%;
+  color: #666;
+  padding: 0.25em;
+  border: 1px solid #ccc;
+}
+
+form textarea {
+  border: 1px solid #ccc;
+  min-height: 6em;
+}
+
+form input[type="button"],
+form input[type="submit"],
+form input[type="reset"] {
+  width: auto;
+  background-color: #39c;
+  border: 1px solid #39c;
+  color: #fff;
+  padding: 0.75em 1em;
+  -webkit-border-radius: 0.32em;
+  -moz-border-radius: 0.32em;
+  border-radius: 0.32em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+form input[type="button"]:hover,
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+  background-color: #069;
+  border-color: #069;
+}
+
+/* Page Fade-ins */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main,
+fade-in {
+  opacity: 0;
+  animation: fade-in ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade-and-move-in {
+  from {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.fade-and-move-in {
+  opacity: 0;
+  animation: fade-and-move-in ease-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.fade-and-move-in:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-and-move-in:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fade-and-move-in:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.fade-and-move-in:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.fade-and-move-in:nth-child(5) {
+  animation-delay: 1s;
+}
+
+/* #SITE SPECIFIC CUSTOM CSS (e.g. Base Overrides)
+--------------------------------- */
+
+body {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  background: #fff;
+}
+
+.site-navigation {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+/* Custom Sections */
+#work {
+  padding-bottom: 4em;
+}
+
+.hero {
+  background: #dedede;
+  text-align: center;
+  padding: 4em 0;
+}
+
+/* Thumb Image Grid */
+
+.thumbgrid a {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  margin-right: -4px;
+  margin-bottom: -7px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .thumbgrid a {
+    width: 25%;
+  }
+}
+
+.thumbgrid a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* animate thumbgrid images on hover */
+
+.thumbgrid a {
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.thumbgrid a img {
+  opacity: 0.75;
+  transition: all ease-in-out 0.2s;
+  transform: scale(1);
+}
+
+.thumbgrid a:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.icon-char {
+  font-size: 2em;
+  font-weight: 200;
+  display: block;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  color: #dedede;
+}
+
+/* Custom MixItUp Styling */
+.mixcontainer {
+  /* text-align: center; */
+}
+
+.mixcontrols {
+  margin-bottom: 2em;
+}
+
+.wufoo input.text,
+.wufoo textarea.textarea {
+  padding: 1em;
+}

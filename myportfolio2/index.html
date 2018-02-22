@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My Portfolio</title>
+
+    <!-- HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+    <!-- MAIN CSS FILE -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="site-branding">
+                <h1>
+                    <a href="index.html">John Doe</a>
+                </h1>
+            </div>
+            <nav class="site-navigation ">
+                <div class="menu-button navicon">Menu</div>
+                <ul class="nav">
+                    <li class="hidden">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="selected">
+                        <a href="index.html#work">Work</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- END CONTAINER -->
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+
+
+            <section id="work" class="text-centered">
+
+                 <div class="mixcontrols">
+                    <button class="filter alt fade-and-move-in" data-filter="all">All</button>
+                    <button class="filter alt fade-and-move-in" data-filter=".print">Print</button>
+                    <button class="filter alt fade-and-move-in" data-filter=".web">Web</button>
+                    <button class="filter alt fade-and-move-in" data-filter=".motion">Motion</button>
+                </div> 
+
+                <div class="thumbgrid mixcontainer fade-and-move-in">
+                    <a href="web-site.html" class="mix web ">
+                        <img src="img/placeholder-1x1-hero.jpg" alt="placeholder" />
+                    </a>
+                    <a href="logo.html" class="mix print">
+                        <img src="img/placeholder-1x1-logo1.jpg" alt="placeholder" />
+                    </a>
+                    <a href="packaging-set.html" class="mix print">
+                        <img src="img/placeholder-1x1-packaging-set.jpg" alt="placeholder" />
+                    </a>
+                    <a href="stationary-set.html" class="mix print">
+                        <img src="img/placeholder-1x1-stationaryset1.jpg" alt="placeholder" />
+                    </a>
+                    <a href="book-cover.html" class="mix print">
+                        <img src="img/placeholder-1x1-book2.jpg" alt="placeholder" />
+                    </a>
+                    <a href="art-work.html" class="mix print">
+                        <img src="img/placeholder-1x1-art1.jpg" alt="placeholder" />
+                    </a>
+                    <a href="web-app.html" class="mix web">
+                        <img src="img/placeholder-1x1-iphone.jpg" alt="placeholder" />
+                    </a>
+                    <a href="promo.html" class="mix motion">
+                        <img src="img/placeholder-1x1-video.jpg" alt="placeholder" />
+                    </a>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer fade-and-move-in">
+        <div class="container">
+            <nav class="site-navigation">
+                <ul class="nav group">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#work">Work</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- END CONTAINER -->
+    </footer>
+
+    <!--  MIXIT UP -->
+    <script src="js/mixitup.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // MIXITUP
+            var containerEl = document.querySelector(".mixcontainer");
+            var mixer = mixitup(containerEl);
+        });
+    </script>
+    
+
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
