@@ -1,0 +1,114 @@
+/* ---------------------- 
+CSS TABLE OF CONTENTS
+
+# TYPOGRAPHY
+# BUTTONS
+# LAYOUT
+    # GRID
+
+------------------------- */
+/* TYPOGRAPHY */
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  /* 16px */
+  line-height: 1.5em;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  margin: 0 0 .5em 0;
+  max-width: 38em; }
+
+/* Traditional typographic scale
+    48, 36, 24, 21, 18, 16 */
+h1 {
+  font-size: 3em;
+  line-height: 1em; }
+
+/* 48 / 16 = 3em */
+h2 {
+  font-size: 2.25em;
+  line-height: 1.1em; }
+
+/* 36 / 16 = 2.25em */
+h3 {
+  font-size: 1.5em;
+  line-height: 1.2em; }
+
+/* 24 / 16 = 1.5em */
+h4 {
+  font-size: 1.3125em;
+  line-height: 1.3em; }
+
+/* 21 / 16 = 1.3125em */
+h5 {
+  font-size: 1.125em;
+  line-height: 1.4em; }
+
+/* 18 / 16 = 1.125em */
+h6 {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+/* 16 / 16 = 1em */
+p {
+  margin: 0 0 .5em 0;
+  max-width: 38em; }
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  height: 1px;
+  margin: 3em 0;
+  background: #ddd; }
+
+/* HELPERS */
+.headline {
+  font-size: 4em;
+  color: #093550;
+  margin: 0; }
+
+.subheadline {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0.25em 0 0.5em 0; }
+
+.meta {
+  font-size: .875em;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5em; }
+
+/* COMPONENTS  */
+/* Buttons */
+button {
+  font-size: inherit; }
+
+button,
+a.button {
+  display: inline-block;
+  background-color: #39c;
+  border: 1px solid #39c;
+  color: #fff;
+  padding: 0.75em 1em;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1em;
+  text-decoration: none; }
+
+button.alt,
+a.button.alt {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #39c;
+  color: #39c; }
+
+button:hover,
+a.button:hover {
+  background-color: #069;
+  color: #fff;
+  border-color: #069;
+  text-decoration: none; }

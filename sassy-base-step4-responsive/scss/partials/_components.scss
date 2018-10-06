@@ -1,0 +1,36 @@
+/* COMPONENTS  */
+
+/* Buttons */
+button {
+  font-size: inherit;
+}
+
+button,
+a.button {
+  display: inline-block;
+  background-color: $type-color-links;
+  border: 1px solid $type-color-links;
+  color: #fff;
+  padding: 0.75em 1em;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1em;
+  text-decoration: none;
+}
+
+button.alt,
+a.button.alt {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid $type-color-links;
+  color: $type-color-links;
+}
+
+button:hover,
+a.button:hover {
+  background-color: $type-color-linksdark;
+  color: #fff;
+  border-color: $type-color-linksdark;
+  text-decoration: none;
+}

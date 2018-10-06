@@ -1,0 +1,19 @@
+/* SITE STRUCTURE */
+header {
+  background: #c6538c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  header a {
+    color: #fff; }
+  header .site-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none; }
+  header .site-navigation a {
+    display: block;
+    padding: 1em; }
