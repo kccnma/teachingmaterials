@@ -1,59 +1,108 @@
 /* TYPOGRAPHY */
 
 body {
-    font-family: $type-base;
-    font-size: 100%; /* 16px */
-    line-height: 1.5em;
-    color: $type-color; 
+  font-family: $type-base;
+  font-size: 100%; /* 16px */
+  line-height: 1.5em;
+  color: $type-color;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $type-heading;
-    margin: 0 0 .5em 0;
-    max-width: $type-linewidth;
-} 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $type-heading;
+  margin: 0 0 0.5em 0;
+  max-width: $type-linewidth;
+}
 
 /* Traditional typographic scale
     48, 36, 24, 21, 18, 16 */
 
-h1 { font-size: 3em; line-height: 1em;} /* 48 / 16 = 3em */
-h2 { font-size: 2.25em; line-height: 1.1em;} /* 36 / 16 = 2.25em */
-h3 { font-size: 1.5em; line-height: 1.2em;} /* 24 / 16 = 1.5em */
-h4 { font-size: 1.3125em; line-height: 1.3em;} /* 21 / 16 = 1.3125em */
-h5 { font-size: 1.125em; line-height: 1.4em;} /* 18 / 16 = 1.125em */
-h6 { font-size: 1em; line-height: 1.5em;} /* 16 / 16 = 1em */
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+} /* 48 / 16 = 3em */
+h2 {
+  font-size: 2.25em;
+  line-height: 1.1em;
+} /* 36 / 16 = 2.25em */
+h3 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+} /* 24 / 16 = 1.5em */
+h4 {
+  font-size: 1.3125em;
+  line-height: 1.3em;
+} /* 21 / 16 = 1.3125em */
+h5 {
+  font-size: 1.125em;
+  line-height: 1.4em;
+} /* 18 / 16 = 1.125em */
+h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+} /* 16 / 16 = 1em */
 
 p {
-    margin: 0 0 .5em 0;
-    max-width: $type-linewidth;
+  margin: 0 0 0.5em 0;
+  max-width: $type-linewidth;
 }
 
 /* Horizontal Rule */
 hr {
-    border: 0;
-    height: 1px;
-    margin: 3em 0;
-    background: #ddd;
+  border: 0;
+  height: 1px;
+  margin: 3em 0;
+  background: #ddd;
 }
 
 /* HELPERS */
 
 .headline {
-    font-size: 4em;
-    color: $accent-color;
-    margin: 0;
+  font-size: 4em;
+  color: $accent-color;
+  margin: 0;
 }
 
 .subheadline {
-    font-family: $type-base;
-    font-size: 2.5em;
-    font-weight: normal;
-    color: $type-color-lightgrey;
-    margin: 0.25em 0 0.5em 0;
+  font-family: $type-base;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: $type-color-lightgrey;
+  margin: 0.25em 0 0.5em 0;
 }
 
 .meta {
-    font-size: .875em;
-    color: $type-color-lightgrey;
-    margin-bottom: 1.5em;
+  font-size: 0.875em;
+  color: $type-color-lightgrey;
+  margin-bottom: 1.5em;
+}
+
+.text-centered {
+  text-align: center;
+  * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sectionhead {
+  font-family: $type-base;
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 1em auto;
+}
+
+.sectionhead:after {
+  display: block;
+  content: "";
+  width: 50px;
+  border: 4px solid $accent-color;
+  margin: 1em auto 6em auto;
 }

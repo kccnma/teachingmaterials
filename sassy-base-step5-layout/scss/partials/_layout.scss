@@ -65,6 +65,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  &.swapped {
+    flex-direction: row-reverse;
+  }
 }
 
 .row > .column {
@@ -87,8 +90,16 @@ body {
       width: 24%;
     }
   }
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .demo .column {
   background: #ddd;
+  text-align: center;
+  p {
+    max-width: none;
+  }
 }
