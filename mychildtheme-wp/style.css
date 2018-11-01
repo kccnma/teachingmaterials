@@ -8,7 +8,3 @@
  Version:      1.0.0
  Text Domain:  nma-childtheme
 */
-
-.main-navigation ul li a:hover, .main-navigation ul li:hover > a, .site-title a:hover, a.cart-contents:hover, .site-header-cart .widget_shopping_cart a:hover, .site-header-cart:hover > li > a, .site-header ul.menu li.current-menu-item > a {
-    color: red;
-}
