@@ -1,0 +1,120 @@
+/* CSS TABLE OF CONTENTS
+
+# BASE CONTENT
+    # BASE TYPOGRAPHY
+        # HEADINGS
+        # LINKS
+        # PARAGRAPHS
+    # MEDIA
+        # IMAGES
+    # COMPONENTS
+        # BUTTONS
+    ...
+
+*/
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 87.5%; /* 1em = 14px */
+    line-height: 1.5em;
+    color: #222;
+}
+
+/* Traditional Typographic Scale for Headings
+    16, 18, 21,24, 36, 48
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: .5em 0;
+}
+
+h1 {
+    font-size: 3em; /* 48px / 16 = 3em */
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 2.25em; /* 36px / 16 = 2.25em */
+    line-height: 1.1em;
+}
+
+h3 {
+    font-size: 1.5em; /* 24px / 16 = 1.5em */
+    line-height: 1.2em;
+}
+
+h4 {
+    font-size: 1.3125em; /* 21px / 16 = 1.3125em */
+    line-height: 1.3em;
+}
+
+h5 {
+    font-size: 1.125em; /* 18px / 16 = 1.125em */
+    line-height: 1.4em;
+}
+
+h6 {
+    font-size: 1em; /* 16px / 16 = 1em */
+    line-height: 1.5em;
+}
+
+/* Paragraphs */
+p {
+    margin: 0 0 .5em 0;
+    max-width: 35em;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons */
+
+button {
+    font-size: inherit;
+}
+.button,
+button {
+    display: inline-block;
+    background: #036;
+    color: #fff;
+    padding: 1em 1.5em;
+    margin: 1em 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border-radius: .5em;
+}
+.button.alt {
+    background: none;
+    border: 1px solid #036;
+    color: #036;
+}
+.button.alert {
+    background: red;
+}
+.button.warning {
+    background: orange;
+}
+.button.ok {
+    background: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
