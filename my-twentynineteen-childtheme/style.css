@@ -1,0 +1,134 @@
+/*
+ Theme Name:   My 2019 Child These
+ Theme URI:    http://egargiulo.com
+ Description:  My Custom Twenty Nineteen Child Theme
+ Author:       John Doe
+ Author URI:   http://egargiulo.com
+ Template:     twentynineteen
+ Version:      1.0.0
+ Text Domain:  my-twentynineteen-childtheme
+*/
+
+
+/* OVERRIDE LINK COLORS */
+a,
+a:visited,
+a:hover,
+a:active {
+    color: #000;
+  }
+
+/* RESTYLE HEADER TO MATCH SITE BASE */
+
+@media only screen and (min-width: 768px) {
+    .site-header {
+        margin: 0;
+        padding: 1em 0;
+    }
+}
+
+.site-branding {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-description {
+    display: none;
+}
+
+.site-title {
+    margin: 0;
+    /* float: left; */
+}
+
+.site-title a,
+.site-title a:link,
+.site-title a:visited {
+    font-weight: bold;
+}
+.main-navigation {
+    font-size: 1em;
+    text-align: right;
+    width: 50%;
+    margin-top: 0;
+}
+
+.main-navigation .main-menu > li > a,
+.main-navigation .main-menu > li > a:hover, 
+.main-navigation .main-menu > li > a:hover + svg {
+    font-weight: normal;
+    color: #000;
+}
+.main-navigation .main-menu > li > a {
+    padding-top: .15em;
+    display: inline-block;
+}
+
+/* STYLIZE FOOTER */
+.site-footer .site-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ENABLE PAGE BUILDER PLUGINS TO GO FULL WIDTH */
+@media only screen and (min-width: 768px) {
+    .entry .entry-content > *, .entry .entry-summary > * {
+        max-width: none;
+    }
+}
+
+@media only screen and (min-width: 1168px) {
+    .entry .entry-content > *, .entry .entry-summary > * {
+        max-width: none;
+    }
+}
+
+/* GET RID OF ENTRY-TITLE TOP BORDER LINES */
+.entry .entry-title:before,
+h1:not(.site-title):before, h2:before {
+    display: none;
+}
+
+/* GET RID OF ENTRY-CONTENT MARGINS */
+/* @media only screen and (min-width: 768px) {
+    .entry .entry-content > *, .entry .entry-summary > * {
+        margin: 1em 0;
+    }
+}
+.entry .entry-content > *, .entry .entry-summary > * {
+    margin: 1em 0;
+} */
+
+@media only screen and (min-width: 768px) {
+    .entry .entry-content > *:first-child, .entry .entry-summary > *:first-child {
+        margin: 0;
+    }
+}
+.entry .entry-content > *:first-child, .entry .entry-summary > *:first-child {
+    margin: 0; 
+}
+
+/* HIDE PAGE TITLES ON PAGES */
+.page .entry-header {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* CUSTOM HERO SECTIONS */
+.hero {
+    background: #ddd;
+    padding: 3em 0;
+}
+
+/* BUTTON OVERRIDES */
+.ow-button-base a {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border: none !important;
+    background: #000 !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
