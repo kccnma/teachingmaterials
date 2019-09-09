@@ -1,0 +1,60 @@
+/* LAYOUT */
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+#MEDIA QUERIES (Mobile First)
+	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
+	#SMALL- (Mobile Only Overrides) - max-width: 767px
+	#MEDIUM+ (Tablet) - min-width: 768px
+	#LARGE+ (Desktop) - min-width: 1050px
+	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
+
+/* SMALL+ (Mobile First Defaults) */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* SMALL ONLY (e.g. for mobile overrides) */
+@media (max-width: $breakpoint-small - 1) {
+  /* SMALL BODY TYPE ON SMALL SCREEENS ONLY */
+  body {
+    font-size: 88.75%; /* 14px; */
+  }
+}
+
+/* #MEDIUM+ */
+@media (min-width: $breakpoint-small) {
+}
+
+/* #LARGE+  */
+@media (min-width: $breakpoint-medium) {
+  /* FIXED WIDTH CONTAINER AT MEDIUM SIZE FOR LARGE SCREENS */
+  .container {
+    width: $breakpoint-medium - 50;
+    padding: 0 50px;
+  }
+}
+
+/* #EXTRA-LARGE+ */
+@media (min-width: $breakpoint-large) {
+  /* EXTRA-LARGE BODY TYPE ON EXTRA-LARGE SCREEN */
+  body {
+    font-size: 112.5%; /* 18px; */
+  }
+
+  /* FIXED WIDTH CONTAINER AT LARGER SIZE FOR EXTRA-LARGE SCREENS */
+  .container {
+    width: $breakpoint-large - 50;
+  }
+}

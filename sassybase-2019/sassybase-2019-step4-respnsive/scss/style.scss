@@ -10,6 +10,13 @@ $type-color-links: #036;
 $type-color-linksdark: #003;
 $accent-color: rgba(198,83,140,1);
 
+// BREAKPOINTS
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
 @import "partials/toc";
 @import "partials/typography";
 @import "partials/buttons"; 
+@import "partials/media";  
+@import "partials/layout";  
