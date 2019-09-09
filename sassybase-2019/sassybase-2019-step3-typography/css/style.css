@@ -1,0 +1,95 @@
+/* ---------------------- 
+CSS TABLE OF CONTENTS
+
+# TYPOGRAPHY
+    # BODY
+    # HEADINGS
+    # LINKS
+# COMPONENTS
+    # BUTTONS
+
+------------------------- */
+/* TYPOGRAPHY */
+body {
+  font-family: "acumin-pro", Helvetica, arial, sans-serif;
+  font-size: 100%;
+  /* 16px */
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "kepler-std", georgia, serif;
+  margin: .5em 0;
+  max-width: 38em; }
+
+/* Traditional typographic scale
+    48, 36, 24, 21, 18, 16 */
+h1 {
+  font-size: 3em;
+  line-height: 1em; }
+
+/* 48 / 16 = 3em */
+h2 {
+  font-size: 2.25em;
+  line-height: 1.1em; }
+
+/* 36 / 16 = 2.25em */
+h3 {
+  font-size: 1.5em;
+  line-height: 1.2em; }
+
+/* 24 / 16 = 1.5em */
+p {
+  margin: 0 0 .5em 0;
+  max-width: 38em; }
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  height: 1px;
+  margin: 3em 0;
+  background: rgba(0, 0, 0, 0.1); }
+
+/* HELPERS */
+.headline {
+  font-size: 4em;
+  color: #cc0000;
+  margin: 0; }
+
+.subheadline {
+  font-family: "acumin-pro", Helvetica, arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0.25em 0 0.5em 0; }
+
+/* BUTTONS */
+button {
+  font-size: inherit; }
+
+button,
+a.button {
+  display: inline-block;
+  background-color: #036;
+  border: 1px solid #036;
+  color: #fff;
+  padding: 0.75em 1em;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1em;
+  text-decoration: none; }
+
+button.alt,
+a.button.alt {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #036;
+  color: #036; }
+
+button:hover,
+a.button:hover {
+  background-color: #003;
+  color: #fff;
+  border-color: #003;
+  text-decoration: none; }
