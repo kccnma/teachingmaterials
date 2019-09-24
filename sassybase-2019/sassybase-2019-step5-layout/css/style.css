@@ -12,8 +12,6 @@ CSS TABLE OF CONTENTS
 /* TYPOGRAPHY */
 body {
   font-family: "acumin-pro", Helvetica, arial, sans-serif;
-  font-size: 100%;
-  /* 16px */
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8); }
 
@@ -137,27 +135,28 @@ img {
 /* SMALL+ (Mobile First Defaults) */
 body {
   margin: 0;
-  padding: 0; }
+  font-size: 88.75%;
+  /* 14px; */ }
 
 .container {
-  width: 100%;
   margin: 0 auto;
   padding: 0 4%; }
 
 /* SMALL ONLY (e.g. for mobile overrides) */
 @media (max-width: 767px) {
-  /* SMALL BODY TYPE ON SMALL SCREEENS ONLY */
-  body {
-    font-size: 88.75%;
-    /* 14px; */ } }
+  /* SMALL BODY TYPE ON SMALL SCREEENS ONLY */ }
 
 /* #MEDIUM+ */
+@media (min-width: 768px) {
+  body {
+    font-size: 100%;
+    /* 16px */ } }
+
 /* #LARGE+  */
 @media (min-width: 1050px) {
   /* FIXED WIDTH CONTAINER AT MEDIUM SIZE FOR LARGE SCREENS */
   .container {
-    width: 1000px;
-    padding: 0 50px; } }
+    max-width: 1050px; } }
 
 /* #EXTRA-LARGE+ */
 @media (min-width: 1250px) {
@@ -167,7 +166,7 @@ body {
     /* 18px; */ }
   /* FIXED WIDTH CONTAINER AT LARGER SIZE FOR EXTRA-LARGE SCREENS */
   .container {
-    width: 1200px; } }
+    max-width: 1250px; } }
 
 /* GRID */
 .row {

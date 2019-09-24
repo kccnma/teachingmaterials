@@ -1,8 +1,6 @@
 /* LAYOUT */
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 /*
 #MEDIA QUERIES (Mobile First)
@@ -16,11 +14,10 @@
 
 body {
   margin: 0;
-  padding: 0;
+  font-size: 88.75%; /* 14px; */    
 }
 
 .container {
-  width: 100%;
   margin: 0 auto;
   padding: 0 4%;
 }
@@ -28,21 +25,20 @@ body {
 /* SMALL ONLY (e.g. for mobile overrides) */
 @media (max-width: $breakpoint-small - 1) {
   /* SMALL BODY TYPE ON SMALL SCREEENS ONLY */
-  body {
-    font-size: 88.75%; /* 14px; */
-  }
 }
 
 /* #MEDIUM+ */
 @media (min-width: $breakpoint-small) {
+  body {
+    font-size: 100%; /* 16px */
+  }
 }
 
 /* #LARGE+  */
 @media (min-width: $breakpoint-medium) {
   /* FIXED WIDTH CONTAINER AT MEDIUM SIZE FOR LARGE SCREENS */
   .container {
-    width: $breakpoint-medium - 50;
-    padding: 0 50px;
+    max-width: $breakpoint-medium;
   }
 }
 
@@ -55,51 +51,6 @@ body {
 
   /* FIXED WIDTH CONTAINER AT LARGER SIZE FOR EXTRA-LARGE SCREENS */
   .container {
-    width: $breakpoint-large - 50;
-  }
-}
-
-/* GRID */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  &.swapped {
-    flex-direction: row-reverse;
-  }
-}
-
-.row > .column {
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 100%;
-  margin: 1% 0;
-  padding: 1em;
-  @media (min-width: 550px) {
-    &.one-half {
-      width: 49%;
-    }
-    &.one-third {
-      width: 32.3333%;
-    }
-    &.two-thirds {
-      width: 65.6666%;
-    }
-    &.one-fourth {
-      width: 24%;
-    }
-  }
-  &.centered {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.demo .column {
-  background: #ddd;
-  text-align: center;
-  p {
-    max-width: none;
+    max-width: $breakpoint-large;
   }
 }
