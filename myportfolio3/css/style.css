@@ -1,0 +1,355 @@
+/* CSS TABLE OF CONTENTS 
+
+  # GLOBALS
+    # RESET
+    # BODY SETTINGS
+  # TYPOGRAPHY
+    # HEADINGS
+    # PARAGRAPHS
+    # LINKS
+    # TYPE SPECIMEN
+  # MEDIA
+    # IMAGES
+  # COMPONENTS
+    # BUTTONS
+  # LAYOUT
+    # CONTAINER
+    # BESPOKE LAYOUT HELPERS
+  # STRUCTURE
+    # HEADER
+    # FOOTER
+    # NAV
+    # MAIN
+    # SECTIONS
+  # ANIMATIONS
+    # @KEYFRAME
+    # SCROLL-TRIGGERED
+
+*/
+
+/* GLOBAL RESET */
+* { box-sizing: border-box; }
+
+/* GLOBAL BODY SETTINGS */
+body {
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 87.5%; /* 14px */
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+  background-color: #ddd;
+  min-height: 100vh;
+}
+
+/* TYPOGRAPHY */
+h1,h2,h3 { font-weight: normal; }
+
+p { max-width: 35em; }
+
+a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+a:hover { color: rgba(0, 0, 0, 1); }
+
+
+/* TYPE SPECIMEN */
+.headline {
+  font-size: 4em;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 .4em 0;
+}
+
+.subheadline {
+  font-size: 2em;
+  font-weight: 300;
+  color: rgba(0,0,0,.4);
+  line-height: 1;
+  margin: 0 0 .6em 0;
+}
+
+
+/* MEDIA */
+img {
+  max-width: 100%;
+  height: auto;
+}
+img.circular {
+  display: block;
+  border-radius: 100%;
+  margin-bottom: 3em;
+}
+
+/* BUTTONS */
+.button {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 3em;
+  padding: 1em 2em;
+  margin: .5em 0;
+}
+.button:hover {
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  border-color: rgba(0, 0, 0, 1);
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* BESPOKE LAYOUT HELPERS */
+@media (min-width: 768px){
+
+  .two-col .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .two-col .subcontent-image,
+  .two-col .subcontent-text {
+    width: 50%;
+    padding: 2em;
+  }
+
+  .col-imagesmaller .container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .col-imagesmaller .subcontent-image {
+    width: 33.3333%;
+  }
+
+  .col-imagesmaller .subcontent-text {
+    width: 66.6666%;
+    padding: 2em;
+  }
+
+  .flippit .container {
+    flex-direction: row-reverse;
+  }
+
+}
+
+/* STRUCTURE */
+
+.site-header,
+.site-footer {
+  text-align: center;
+  margin: 1em 0;
+  padding-bottom: 1em;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+.site-header h1 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.site-header h1 a {
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1em;
+  display: inline-block;
+  transition: .2s ease-out all;
+}
+
+.site-header h1 a:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* SITE NAV */
+.site-navigation ul {
+  padding: 0;
+  margin: 1em 1.5em 0 0;
+}
+
+.site-navigation ul li {
+  display: inline-block;
+}
+
+.site-navigation ul li a {
+  display: block;
+  padding: 1em 0.5em;
+  margin: 0 .2em;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: .2s ease-out all;
+}
+
+.site-navigation ul li a:hover {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 1);
+}
+
+.site-navigation ul li a.selected {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/* MAIN CONTENT */
+main { padding: 5em 0; }
+section {
+  padding: 2em;
+  min-height: 90vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* FEATURED PROJECTS ON HOME PAGE */
+@media (min-width: 768px) {
+
+  .featuredproject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .featuredproject.swapped {
+    flex-direction: row-reverse;
+  }
+  .featuredproject .image-wrapper {
+    width: 49%;
+  }
+  .featuredproject .text-wrapper {
+    width: 49%;
+    padding: 3em;
+  }
+
+}
+
+
+
+/* SUB PAGE: PROJECT DETAIL PAGES */
+
+.page-projectdetail {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.page-projectdetail main {
+  padding: 0;
+}
+
+.page-projectdetail .hero {
+  background: #dedede;
+  padding: 0;
+}
+
+.page-projectdetail .darker {
+  background: rgba(0, 0, 0,.05);
+}
+
+.projectinfo p {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 45em;
+}
+
+.subcontent-text {
+  padding: 2em 0;
+}
+
+.subcontent-text h3 {
+  font-size: 1.75em;
+}
+
+.meta-text h3 {
+  border-top: 1px solid rgba(0,0,0,.3);
+  padding-top: 2em;
+}
+
+.meta-list {
+  list-style: none;
+  padding: 2em 0;
+}
+
+.meta-list span {
+  font-weight: bold;
+}
+
+@media (min-width: 768px){
+
+  .projectinfo p {
+    columns: 2;
+  }
+
+  .meta-info .meta-list {
+    columns: 2;
+  }
+
+}
+
+/* @KEYFRAME ANIMATIONS */
+@keyframes fade-in-and-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-and-down * {
+  animation-name: fade-in-and-down;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fade-in-and-down *:nth-child(1) { animation-delay: 0.2s; }
+.fade-in-and-down *:nth-child(2) { animation-delay: 0.4s; }
+.fade-in-and-down *:nth-child(3) { animation-delay: 0.6s; }
+.fade-in-and-down *:nth-child(4) { animation-delay: 0.8s; }
+.fade-in-and-down *:nth-child(5) { animation-delay: 1s; }
+.fade-in-and-down *:nth-child(6) { animation-delay: 1.2s; }
+.fade-in-and-down *:nth-child(7) { animation-delay: 1.4s; }
+.fade-in-and-down *:nth-child(8) { animation-delay: 1.6s; }
+
+
+/* SCROLL-TRIGGERED ANIMATIONS ("REVEALER")*/
+.revealer * {
+  transition: transform .4s cubic-bezier(0, .5, .5, 1);
+  transition: opacity .4s linear;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.revealer *:nth-child(1) { transition-delay: .2s; }
+.revealer *:nth-child(2) { transition-delay: .4s; }
+.revealer *:nth-child(3) { transition-delay: .6s; }
+.revealer *:nth-child(4) { transition-delay: .8s; }
+.revealer *:nth-child(5) { transition-delay: .9s; }
+.revealer *:nth-child(6) { transition-delay: 1s; }
+.revealer *:nth-child(7) { transition-delay: 1.1s; }
+.revealer *:nth-child(8) { transition-delay: 1.2s; }
+.revealer *:nth-child(9) { transition-delay: 1.3s; }
+
+.active * {
+  opacity: 1;
+  transform: translateY(0);
+}
