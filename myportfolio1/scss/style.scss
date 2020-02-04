@@ -1,0 +1,100 @@
+@import "base";
+
+/* #SITE SPECIFIC CUSTOM CSS (e.g. Base Overrides)
+---------------------------------
+	#TYPOGRAPHY OVERRIDES
+		#@FONT-FACE
+        #BODY
+		#HEADINGS
+		#PARAGRAPHS
+    #LAYOUT OVERRIDES
+		#BODY
+		#CONTAINER
+    #NAVIGATION
+        #SITE-BRANDING
+        #SITE-NAVIGATION
+    #CONTENT
+        #SECTIONS
+--------------------------------- */
+
+/* Custom Overrides */
+
+.mixcontainer .mix{
+    
+    display: inline-block;
+    //float: left;
+    
+    width: 49%;
+    margin-right: -4px;
+    padding: 0 .5%;
+    
+    @media(min-width: $breakpoint-small) {
+        width: 24%;
+        //margin: .5%;
+    }
+    
+    
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    
+	display: none;
+}
+
+#work {
+    padding-bottom: 5em; 
+    min-height: 20em; 
+}
+
+.controls {
+    margin-bottom: 2em;
+}
+
+
+.post-navigation {
+    text-align: center;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    margin: 2em 0 4em 0;
+    
+    a {
+        display: inline-block;
+    }
+    .column { margin-bottom: 0; }
+    .column:first-child a { float: left; margin-left: 1em; }
+    .column:last-child a { float: right;  margin-right: 1em;}
+    
+}
+
+.icon-char {
+    font-size: 2em;
+    font-weight: 200;
+    display: block;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    padding: 0;
+    
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+}
+
+body {
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
