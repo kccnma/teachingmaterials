@@ -1,0 +1,50 @@
+/* TYPOGRAPHY */
+
+body {
+    font-family: $type-base;
+    font-size: 100%; /* 16px */
+    line-height: 1.5;
+    color: $type-color; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $type-heading;
+    margin: .5em 0;
+    max-width: $type-linewidth;
+} 
+
+/* Traditional typographic scale
+    48, 36, 24, 21, 18, 16 */
+
+h1 { font-size: 3em; line-height: 1em;} /* 48 / 16 = 3em */
+h2 { font-size: 2.25em; line-height: 1.1em;} /* 36 / 16 = 2.25em */
+h3 { font-size: 1.5em; line-height: 1.2em;} /* 24 / 16 = 1.5em */
+
+p {
+    margin: 0 0 .5em 0;
+    max-width: $type-linewidth;
+}
+
+/* Horizontal Rule */
+hr {
+    border: 0;
+    height: 1px;
+    margin: 3em 0;
+    background: rgba(0,0,0,.1);
+}
+
+/* HELPERS */
+
+.headline {
+    font-size: 4em;
+    color: $accent-color;
+    margin: 0;
+}
+
+.subheadline {
+    font-family: $type-base;
+    font-size: 2.5em;
+    font-weight: normal;
+    color: $type-color-lightgrey;
+    margin: 0.25em 0 0.5em 0;
+}
